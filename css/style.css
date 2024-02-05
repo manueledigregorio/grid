@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  background-color: aquamarine;
+  border: 1px solid brown;
+  border-radius: 5px;
+  font-size: 150%;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  /*sono le colonne di quanto le vuoi grandi  grid-template-columns: 1fr 2fr 1fr; */
+
+  grid-template-columns: repeat(3, 1fr);
+  /*ripeti quante volte le cononne devono essere grandi 
+ */
+  /*grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));*/
+  grid-template-rows: repeat(3, 200px);
+  /* grid-template-rows:minmax(200px, auto);*/
+  grid-auto-rows: 200px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.sized {
+  width: 50%;
+  height: 50%;
+}
+
+#otto {
+  align-self: center;
+  justify-self: center;
+}
+
+#dodici {
+  place-self: center;
+}
